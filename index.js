@@ -7,7 +7,7 @@ app.get('/teams/:id', (request, response) => {
     const id = request.params.id
 
     const matchingTeam = teams.filter((team) => {
-        return team.id === Number(id) || team.abbreviation === id
+        return team.id === Number(id) || team.abbreviation === id.toUpperCase()
     })
 
     if (matchingTeam.length) {
