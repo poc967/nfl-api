@@ -8,4 +8,5 @@ const teams = (connection, Sequelize) => {
     division: { type: Sequelize.ENUM('North', 'South', 'East', 'West') },
   }, { paranoid: true })
 }
+
 module.exports = teams
